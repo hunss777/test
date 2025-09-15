@@ -74,12 +74,11 @@ echo ""
 # 포트 연결 테스트
 echo -e "${BLUE}🔌 포트 연결 테스트${NC}"
 echo "----------------------------------------"
-ports=("80" "443" "22" "53")
+ports=("80" "443" "53")
 for port in "${ports[@]}"; do
     case $port in
         80) service="HTTP";;
         443) service="HTTPS";;
-        22) service="SSH";;
         53) service="DNS";;
     esac
     
